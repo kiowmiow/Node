@@ -17,7 +17,7 @@ RUN GOOS=${TARGETOS} GOARCH=${TARGETARCH} make install_xray
 # و هم محتوایش باید در فیلد "Server CA" پنل کپی شود.
 # دامنه TCP Proxy که Railway به این سرویس می‌دهد باید اینجا باشد وگرنه
 # پنل هنگام اتصال خطای "Hostname mismatch" می‌دهد.
-ARG NODE_DOMAIN=hayabusa.proxy.rlwy.net
+ARG NODE_DOMAIN=node-ezaccess1.up.railway.app
 RUN mkdir -p /src/certs && \
     openssl req -x509 -newkey ec \
         -pkeyopt ec_paramgen_curve:P-256 \
